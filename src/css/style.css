@@ -1,0 +1,86 @@
+/* ========================================
+ RESET
+======================================== */
+body {
+  margin: 0;
+  background-color: #FFFFFF;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+/* ===============
+ HEADER LAYOUT
+======================================== */
+.container {
+  max-width: 1200px;   
+  margin: 0 auto;      
+  padding: 0 40px;    
+  padding-top: 15px;
+
+  display: flex;       
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+/* ========================================
+   LOGO
+======================================== */
+.logo img {
+  height: 30px;
+  width: auto;
+  margin-left: 20px;
+}
+
+
+/* ========================================
+   NAVIGATION
+======================================== */
+.nav-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Navigation list */
+nav ul {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation links */
+nav ul li a {
+  color: #333333;
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  padding: 0px 0;
+}
+
+
+/* ========================================
+   RESPONSIVE (MOBILE)
+======================================== */
+@media screen and (max-width: 500px) {
+
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-container {
+    width: 100%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+}
