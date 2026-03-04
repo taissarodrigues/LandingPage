@@ -98,6 +98,8 @@ nav {
   bottom: 0;
 }
 
+
+
 /* ======================
    TABLET
 ====================== */
@@ -146,6 +148,7 @@ nav {
     transform: translateY(-50%) rotate(-45deg);
     transform-origin: center;
   }
+ 
 }
   
 /* ======================
@@ -157,5 +160,14 @@ nav {
   .container {
     padding: 6px 12px;
   }
+   .banner-inner h1 {
+  font-size: 48px;
+  margin: 0;
+}
+
+.banner-inner p {
+  font-size: 20px;
+  margin: 20px 0;
+}
 
 }
