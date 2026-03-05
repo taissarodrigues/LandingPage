@@ -1,5 +1,5 @@
 /* ========================================
- RESET
+   RESET
 ======================================== */
 body {
   margin: 0;
@@ -7,9 +7,9 @@ body {
   font-family: 'Roboto Condensed', sans-serif;
 }
 
-/* ===============
- HEADER LAYOUT
-============================== */
+/* ========================================
+   LAYOUT BASE (CONTAINER)
+======================================== */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -22,22 +22,22 @@ body {
 }
 
 /* ========================================
-   LOGO
+   HEADER - LOGO
 ======================================== */
 .logo img {
   height: 30px;
   width: auto;
-  margin-left: 20px;
 }
 
 /* ========================================
-   NAVIGATION
+   HEADER - NAVIGATION
 ======================================== */
 
 nav {
   display: flex;
   align-items: center;
   gap: 32px;
+  margin: 15px 0;
 }
 
 .nav-list {
@@ -58,7 +58,7 @@ nav {
 }
 
 /* ========================================
-   HAMBURGER BUTTON
+   HEADER - HAMBURGER MENU
 ======================================== */
 
 .hamburguer-button {
@@ -69,7 +69,6 @@ nav {
   background: none;
   border: none;
   cursor: pointer;
-  
 }
 
 .hamburguer-button span,
@@ -98,11 +97,101 @@ nav {
   bottom: 0;
 }
 
+/* ========================================
+   HERO SECTION (BANNER)
+======================================== */
 
+.section.banner-section {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 70px);
 
-/* ======================
-   TABLET
-====================== */
+  background-image: url(/src/assets/img/image5-bg.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+/* overlay background */
+.section.banner-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+/* ========================================
+   HERO LAYOUT
+======================================== */
+
+.container-hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+}
+
+/* ========================================
+   HERO CONTENT
+======================================== */
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+  max-width: 550px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  color: white;
+}
+
+.hero-text h1 {
+  font-size: 72px;
+  margin-bottom: 8px;
+  color: white;
+}
+
+.banner-divider {
+  width: 100px;
+  height: 5px;
+  background: white;
+  margin: 30px 0;
+  border-radius: 3px;
+}
+
+.hero-text p {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/* ========================================
+   HERO SCROLL INDICATOR
+======================================== */
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  z-index: 2;
+}
+
+.scroll-indicator img {
+  width: 40px;
+  height: auto;
+  transform: rotate(-90deg);
+}
+
+/* ========================================
+   RESPONSIVE - TABLET
+======================================== */
+
 @media (max-width: 1024px) {
 
   .hamburguer-button {
@@ -132,42 +221,41 @@ nav {
     clip-path: circle(1500px at 90% -15%);
     pointer-events: all;
   }
+
   .nav-list li a {
     font-size: 24px;
   }
+
   .hamburguer-button.active span {
     opacity: 0;
   }
+
   .hamburguer-button.active::before {
     top: 50%;
     transform: translateY(-50%) rotate(45deg);
     transform-origin: center;
   }
+
   .hamburguer-button.active::after {
     top: 50%;
     transform: translateY(-50%) rotate(-45deg);
     transform-origin: center;
   }
- 
 }
-  
-/* ======================
-   MOBILE
-====================== */
+
+/* ========================================
+   RESPONSIVE - MOBILE
+======================================== */
 
 @media (max-width: 750px) {
 
   .container {
     padding: 6px 12px;
   }
-   .banner-inner h1 {
-  font-size: 48px;
-  margin: 0;
-}
 
-.banner-inner p {
-  font-size: 20px;
-  margin: 20px 0;
-}
+  .hero-text p {
+    font-size: 20px;
+    margin: 20px 0;
+  }
 
 }
