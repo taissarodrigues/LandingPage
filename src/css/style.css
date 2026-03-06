@@ -8,22 +8,77 @@ body {
 }
 
 /* ========================================
-   LAYOUT BASE (CONTAINER)
+   LAYOUT
 ======================================== */
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 40px;
-  padding-top: 15px;
+  padding: 0 24px;
+}
 
+/* ========================================
+   TYPOGRAPHY
+======================================== */
+
+.title-large {
+  font-size: 72px;
+  font-weight: 700;
+}
+
+.title-medium {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.text-base {
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.font-normal {
+  font-weight: 300;
+}
+
+/* ========================================
+   BUTTONS
+======================================== */
+
+.button-primary {
+  padding: 14px 36px;
+  background-color: #FFFFFF;
+  color: #FA8550;
+
+  font-size: 20px;
+  font-weight: 700;
+
+  border: none;
+  border-radius: 40px;
+
+  cursor: pointer;
+  margin-top: 40px;
+
+  transition: 0.2s;
+}
+
+.button-primary:hover {
+  transform: translateY(-2px);
+}
+
+/* ========================================
+   HEADER
+======================================== */
+
+header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 15px;
 }
 
 /* ========================================
    HEADER - LOGO
 ======================================== */
+
 .logo img {
   height: 30px;
   width: auto;
@@ -48,7 +103,6 @@ nav {
   padding: 0;
 }
 
-/* Navigation links */
 .nav-list li a {
   color: #333333;
   font-size: 20px;
@@ -58,7 +112,7 @@ nav {
 }
 
 /* ========================================
-   HEADER - HAMBURGER MENU
+   HAMBURGER MENU
 ======================================== */
 
 .hamburguer-button {
@@ -98,10 +152,10 @@ nav {
 }
 
 /* ========================================
-   HERO SECTION (BANNER)
+   HERO
 ======================================== */
 
-.section.banner-section {
+.banner-section {
   position: relative;
   width: 100%;
   height: calc(100vh - 70px);
@@ -111,26 +165,18 @@ nav {
   background-position: center;
 }
 
-/* overlay background */
-.section.banner-section::before {
+/* overlay escuro */
+
+.banner-section::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0,0,0,0.5);
   z-index: 1;
 }
 
-/* ========================================
-   HERO LAYOUT
-======================================== */
-
-.container-hero {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
-
+.banner-section .container {
   height: 100%;
-
   display: flex;
   align-items: center;
 }
@@ -154,8 +200,15 @@ nav {
 .hero-text h1 {
   font-size: 72px;
   margin-bottom: 8px;
-  color: white;
 }
+
+.hero-text p {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/* linha branca */
 
 .banner-divider {
   width: 100px;
@@ -163,12 +216,6 @@ nav {
   background: white;
   margin: 30px 0;
   border-radius: 3px;
-}
-
-.hero-text p {
-  font-size: 24px;
-  font-weight: 300;
-  line-height: 1.6;
 }
 
 /* ========================================
@@ -179,17 +226,34 @@ nav {
   position: absolute;
   bottom: 40px;
   left: 50%;
+  transform: translateX(-50%);
   z-index: 2;
 }
 
 .scroll-indicator img {
   width: 40px;
-  height: auto;
   transform: rotate(-90deg);
 }
 
 /* ========================================
-   RESPONSIVE - TABLET
+   ABOUT
+======================================== */
+
+.about-section {
+  width: 100%;
+  background: #FA8550;
+  text-align: center;
+  padding: 100px 24px;
+}
+
+.about-section .container {
+  max-width: 700px;
+  margin: 0 auto;
+  color: white;
+}
+
+/* ========================================
+   RESPONSIVE
 ======================================== */
 
 @media (max-width: 1024px) {
@@ -233,29 +297,27 @@ nav {
   .hamburguer-button.active::before {
     top: 50%;
     transform: translateY(-50%) rotate(45deg);
-    transform-origin: center;
   }
 
   .hamburguer-button.active::after {
     top: 50%;
     transform: translateY(-50%) rotate(-45deg);
-    transform-origin: center;
   }
-}
 
-/* ========================================
-   RESPONSIVE - MOBILE
-======================================== */
+}
 
 @media (max-width: 750px) {
 
   .container {
-    padding: 6px 12px;
+    padding: 0 16px;
+  }
+
+  .hero-text h1 {
+    font-size: 48px;
   }
 
   .hero-text p {
     font-size: 20px;
-    margin: 20px 0;
   }
 
 }
