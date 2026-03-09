@@ -26,12 +26,12 @@ body {
 }
 
 .title-medium {
-  font-size: 36px;
+  font-size: 60px;
   font-weight: 700;
 }
 
 .text-base {
-  font-size: 20px;
+  font-size: 24px;
   line-height: 1.6;
 }
 
@@ -45,17 +45,17 @@ body {
 
 .button-primary {
   padding: 14px 36px;
-  background-color: #FFFFFF;
+  background-color:#FFFFFF;
   color: #FA8550;
 
   font-size: 20px;
-  font-weight: 700;
+  font-weight: bold;
 
   border: none;
-  border-radius: 40px;
+  border-radius: 30px;
 
   cursor: pointer;
-  margin-top: 40px;
+  margin-top: 30px;
 
   transition: 0.2s;
 }
@@ -199,7 +199,7 @@ nav {
 
 .hero-text h1 {
   font-size: 72px;
-  margin-bottom: 8px;
+  /* margin-bottom: 8px; */
 }
 
 .hero-text p {
@@ -214,10 +214,12 @@ nav {
   width: 100px;
   height: 5px;
   background: white;
-  margin: 30px 0;
+  margin: 30px ;
   border-radius: 3px;
 }
-
+.banner-divider.center {
+  margin: 30px auto;
+}
 /* ========================================
    HERO SCROLL INDICATOR
 ======================================== */
