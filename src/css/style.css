@@ -42,7 +42,7 @@ body {
 .font-normal-small {
   font-size: 18px;
   line-height: 1.6;
-    font-weight: 200;
+    font-weight: 400;
 
 }
 
@@ -265,6 +265,42 @@ nav {
 }
 
 /* ========================================
+   FEATURES SECTION
+======================================== */
+
+
+.features-section {
+  background: #FFFFFF;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;  /* espaço entre os cards */
+  margin-top: 60px;
+}
+
+.feature-item {
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 10px;  /* espaço entre icon, h3 e p */
+}
+.feature-item h3,
+.feature-item p {
+  margin: 0;
+   max-width: 320px;
+   text-align: center;
+}
+
+
+/* ========================================
    RESPONSIVE
 ======================================== */
 
@@ -324,6 +360,9 @@ nav {
   .text-base {
     font-size: 24px;
   }
+    .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media (max-width: 750px) {
 
@@ -337,6 +376,9 @@ nav {
 
   .hero-text p {
     font-size: 20px;
+  }
+   .features-grid {
+    grid-template-columns: 1fr;
   }
 
 }
