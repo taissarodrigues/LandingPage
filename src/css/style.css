@@ -303,8 +303,18 @@ nav {
    CTA SECTION
 ======================================== */
 
+.cta-section {
+  /* width: 100%; */
+  background: #FA8550;
+  text-align: center;
+  padding: 100px 24px;
+}
 
-
+.cta-section .container-cta {
+  max-width: 700px;
+  margin: 0 auto;
+  color: white;
+}
 
 /* ========================================
    RESPONSIVE
