@@ -39,6 +39,12 @@ body {
 .font-normal {
   font-weight: 300;
 }
+.font-normal-small {
+  font-size: 18px;
+  line-height: 1.6;
+    font-weight: 200;
+
+}
 
 /* ========================================
    BUTTONS
@@ -221,6 +227,9 @@ nav {
 .banner-divider.center {
   margin: 30px auto;
 }
+.banner-divider.center.orange {
+  background: #FA8550;
+}
 /* ========================================
    HERO SCROLL INDICATOR
 ======================================== */
@@ -311,6 +320,9 @@ nav {
   .hamburguer-button.active::after {
     top: 50%;
     transform: translateY(-50%) rotate(-45deg);
+  }
+  .text-base {
+    font-size: 24px;
   }
 }
 @media (max-width: 750px) {
