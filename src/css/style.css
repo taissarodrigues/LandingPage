@@ -5,25 +5,81 @@ body {
   margin: 0;
   background-color: #FFFFFF;
   font-family: 'Roboto Condensed', sans-serif;
+  /* overflow-x: hidden; */
 }
 
 /* ========================================
-   LAYOUT BASE (CONTAINER)
+   LAYOUT
 ======================================== */
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 40px;
-  padding-top: 15px;
+  padding: 0 24px;
+}
 
+/* ========================================
+   TYPOGRAPHY
+======================================== */
+
+.title-large {
+  font-size: 72px;
+  font-weight: 700;
+}
+
+.title-medium {
+  font-size: 60px;
+  font-weight: 700;
+}
+
+.text-base {
+  font-size: 24px;
+  line-height: 1.6;
+}
+
+.font-normal {
+  font-weight: 300;
+}
+
+/* ========================================
+   BUTTONS
+======================================== */
+
+.button-primary {
+  padding: 14px 36px;
+  background-color:#FFFFFF;
+  color: #FA8550;
+
+  font-size: 20px;
+  font-weight: bold;
+
+  border: none;
+  border-radius: 30px;
+
+  cursor: pointer;
+  margin-top: 30px;
+
+  transition: 0.2s;
+}
+
+.button-primary:hover {
+  transform: translateY(-2px);
+}
+
+/* ========================================
+   HEADER
+======================================== */
+
+header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 15px;
 }
 
 /* ========================================
    HEADER - LOGO
 ======================================== */
+
 .logo img {
   height: 30px;
   width: auto;
@@ -48,7 +104,6 @@ nav {
   padding: 0;
 }
 
-/* Navigation links */
 .nav-list li a {
   color: #333333;
   font-size: 20px;
@@ -58,7 +113,7 @@ nav {
 }
 
 /* ========================================
-   HEADER - HAMBURGER MENU
+   HAMBURGER MENU
 ======================================== */
 
 .hamburguer-button {
@@ -98,10 +153,10 @@ nav {
 }
 
 /* ========================================
-   HERO SECTION (BANNER)
+   HERO
 ======================================== */
 
-.section.banner-section {
+.banner-section {
   position: relative;
   width: 100%;
   height: calc(100vh - 70px);
@@ -111,26 +166,18 @@ nav {
   background-position: center;
 }
 
-/* overlay background */
-.section.banner-section::before {
+/* overlay escuro */
+
+.banner-section::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0,0,0,0.5);
   z-index: 1;
 }
 
-/* ========================================
-   HERO LAYOUT
-======================================== */
-
-.container-hero {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
-
+.banner-section .container {
   height: 100%;
-
   display: flex;
   align-items: center;
 }
@@ -153,16 +200,7 @@ nav {
 
 .hero-text h1 {
   font-size: 72px;
-  margin-bottom: 8px;
-  color: white;
-}
-
-.banner-divider {
-  width: 100px;
-  height: 5px;
-  background: white;
-  margin: 30px 0;
-  border-radius: 3px;
+  /* margin-bottom: 8px; */
 }
 
 .hero-text p {
@@ -171,6 +209,18 @@ nav {
   line-height: 1.6;
 }
 
+/* linha branca */
+
+.banner-divider {
+  width: 100px;
+  height: 5px;
+  background: white;
+  margin: 30px 0;
+  border-radius: 3px;
+}
+.banner-divider.center {
+  margin: 30px auto;
+}
 /* ========================================
    HERO SCROLL INDICATOR
 ======================================== */
@@ -179,46 +229,69 @@ nav {
   position: absolute;
   bottom: 40px;
   left: 50%;
+  transform: translateX(-50%);
   z-index: 2;
 }
 
 .scroll-indicator img {
   width: 40px;
-  height: auto;
   transform: rotate(-90deg);
 }
 
 /* ========================================
-   RESPONSIVE - TABLET
+   ABOUT
+======================================== */
+
+.about-section {
+  /* width: 100%; */
+  background: #FA8550;
+  text-align: center;
+  padding: 100px 24px;
+}
+
+.about-section .container {
+  max-width: 700px;
+  margin: 0 auto;
+  color: white;
+}
+
+/* ========================================
+   RESPONSIVE
 ======================================== */
 
 @media (max-width: 1024px) {
+  nav {
+    position: relative;
+  }
 
   .hamburguer-button {
     display: block;
-    z-index: 1;
+    position: relative;
+    z-index: 1001;
   }
 
   .nav-list {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
+    inset: 0;
+    width: 100%;
     height: 100vh;
     background: #FFFFFF;
 
-    clip-path: circle(100px at 90% -15%);
-    transition: 1s ease-out;
-
+    display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    gap: 32px;
+
+    clip-path: circle(0 at 90% 40px);
+    transition: clip-path 0.5s ease-in-out;
 
     pointer-events: none;
+    z-index: 1000;
   }
 
   .nav-list.active {
-    clip-path: circle(1500px at 90% -15%);
+    clip-path: circle(150% at 90% 40px);
     pointer-events: all;
   }
 
@@ -233,29 +306,25 @@ nav {
   .hamburguer-button.active::before {
     top: 50%;
     transform: translateY(-50%) rotate(45deg);
-    transform-origin: center;
   }
 
   .hamburguer-button.active::after {
     top: 50%;
     transform: translateY(-50%) rotate(-45deg);
-    transform-origin: center;
   }
 }
-
-/* ========================================
-   RESPONSIVE - MOBILE
-======================================== */
-
 @media (max-width: 750px) {
 
   .container {
-    padding: 6px 12px;
+    padding: 0 16px;
+  }
+
+  .hero-text h1 {
+    font-size: 48px;
   }
 
   .hero-text p {
     font-size: 20px;
-    margin: 20px 0;
   }
 
 }
