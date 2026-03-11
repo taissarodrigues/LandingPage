@@ -67,6 +67,23 @@ body {
   transition: 0.2s;
 }
 
+.button-primary-black {
+  padding: 14px 36px;
+  background-color:#FFFFFF;
+  color: #333333;
+
+  font-size: 20px;
+  font-weight: bold;
+
+  border: none;
+  border-radius: 30px;
+
+  cursor: pointer;
+  margin-top: 30px;
+
+  transition: 0.2s;
+}
+
 .button-primary:hover {
   transform: translateY(-2px);
 }
@@ -299,6 +316,43 @@ nav {
    text-align: center;
 }
 
+/* ========================================
+   CTA SECTION
+======================================== */
+
+.cta-section {
+  /* width: 100%; */
+  background: #333333;
+  text-align: center;
+  padding: 100px 24px;
+  text-align: center;
+  color: white;
+}
+
+.cta-section .container-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  color: white;
+}
+
+
+
+/* ========================================
+   RIOT SECTION
+======================================== */
+.riot-section {
+  background: #F8F8F8;
+  padding: 40PX;
+
+  display: flex;
+justify-content: center;  
+}
+.riot-logo {
+  height: 40px;
+
+}
 
 /* ========================================
    RESPONSIVE
