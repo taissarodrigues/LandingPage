@@ -3,8 +3,8 @@
 ======================================== */
 body {
   margin: 0;
-  background-color: #FFFFFF;
-  font-family: 'Roboto Condensed', sans-serif;
+  background-color: #ffffff;
+  font-family: "Roboto Condensed", sans-serif;
   /* overflow-x: hidden; */
 }
 
@@ -42,8 +42,7 @@ body {
 .font-normal-small {
   font-size: 18px;
   line-height: 1.6;
-    font-weight: 400;
-
+  font-weight: 400;
 }
 
 /* ========================================
@@ -52,8 +51,8 @@ body {
 
 .button-primary {
   padding: 14px 36px;
-  background-color:#FFFFFF;
-  color: #FA8550;
+  background-color: #ffffff;
+  color: #fa8550;
 
   font-size: 20px;
   font-weight: bold;
@@ -69,7 +68,7 @@ body {
 
 .button-primary-black {
   padding: 14px 36px;
-  background-color:#FFFFFF;
+  background-color: #ffffff;
   color: #333333;
 
   font-size: 20px;
@@ -152,7 +151,7 @@ nav {
 .hamburguer-button span,
 .hamburguer-button::before,
 .hamburguer-button::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   width: 100%;
@@ -195,7 +194,7 @@ nav {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
 
@@ -245,7 +244,7 @@ nav {
   margin: 30px auto;
 }
 .banner-divider.center.orange {
-  background: #FA8550;
+  background: #fa8550;
 }
 /* ========================================
    HERO SCROLL INDICATOR
@@ -270,7 +269,7 @@ nav {
 
 .about-section {
   /* width: 100%; */
-  background: #FA8550;
+  background: #fa8550;
   text-align: center;
   padding: 100px 24px;
 }
@@ -285,19 +284,10 @@ nav {
    FEATURES SECTION
 ======================================== */
 
-
 .features-section {
-  background: #FFFFFF;
+  background: #ffffff;
   text-align: center;
   padding: 100px 20px;
-}
-
-
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;  /* espaço entre os cards */
-  margin-top: 60px;
 }
 
 .feature-item {
@@ -307,13 +297,18 @@ nav {
   flex-direction: column;
   align-items: center;
 
-  gap: 10px;  /* espaço entre icon, h3 e p */
+  gap: 10px;
 }
+
+.feature-item h3 {
+  font-weight: 700;
+}
+
 .feature-item h3,
 .feature-item p {
   margin: 0;
-   max-width: 320px;
-   text-align: center;
+  max-width: 320px;
+  text-align: center;
 }
 
 /* ========================================
@@ -337,21 +332,22 @@ nav {
   color: white;
 }
 
-
-
 /* ========================================
    RIOT SECTION
 ======================================== */
 .riot-section {
-  background: #F8F8F8;
-  padding: 40PX;
-
-  display: flex;
-justify-content: center;  
+  background: #f8f8f8;
+  padding: 40px;
 }
-.riot-logo {
-  height: 40px;
 
+.riot-section .container {
+  display: flex;
+  justify-content: center;
+}
+
+.riot-logo {
+  height: 65px;
+  display: block;
 }
 
 /* ========================================
@@ -374,7 +370,7 @@ justify-content: center;
     inset: 0;
     width: 100%;
     height: 100vh;
-    background: #FFFFFF;
+    background: #ffffff;
 
     display: flex;
     flex-direction: column;
@@ -414,12 +410,9 @@ justify-content: center;
   .text-base {
     font-size: 24px;
   }
-    .features-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+
 }
 @media (max-width: 750px) {
-
   .container {
     padding: 0 16px;
   }
@@ -431,8 +424,5 @@ justify-content: center;
   .hero-text p {
     font-size: 20px;
   }
-   .features-grid {
-    grid-template-columns: 1fr;
-  }
-
+ 
 }
